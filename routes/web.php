@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('reservation','ReservationsController');
+Route::post('/api/st','ReservationsController@SeatsTaken')->name('checkSeats');
